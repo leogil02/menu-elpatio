@@ -3,39 +3,177 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Menú digital</title>
+    <title>Restaurante</title>
     <style>
       :root {
-        color-scheme: light;
+        color-scheme: dark;
+        --carbon: #17110e;
+        --humo: #241b16;
+        --crema: #f4ebdf;
+        --brasa: #e07a3c;
+        --tenue: #b6a495;
       }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-        background: #faf7f2;
-        color: #2b2622;
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        padding: 0 20px 56px;
+        background: var(--carbon);
+        color: var(--crema);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 18px;
+        line-height: 1.45;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      .tapa,
+      main,
+      .cubierto {
+        max-width: 620px;
+        margin: 0 auto;
+      }
+
+      /* ---------- La tapa ---------- */
+
+      .tapa {
+        padding: 44px 0 20px;
         text-align: center;
       }
+
+      .arriba {
+        margin: 0 0 10px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-size: 13px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--brasa);
+      }
+
       h1 {
-        margin: 0 0 12px;
-        font-size: 26px;
-      }
-      p {
         margin: 0;
-        font-size: 18px;
-        line-height: 1.5;
-        color: #5c534b;
+        font-size: 34px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
       }
-    </style>
-  </head>
-  <body>
+
+      /* ---------- El cubierto, antes de los platos ---------- */
+
+      .cubierto {
+        margin: 0 auto 30px;
+        padding: 12px 16px;
+        background: var(--humo);
+        border-left: 3px solid var(--brasa);
+        border-radius: 3px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-size: 15px;
+        color: var(--tenue);
+      }
+
+      .cubierto b {
+        color: var(--crema);
+        font-weight: 600;
+      }
+
+      /* ---------- Las secciones ---------- */
+
+      section {
+        margin-bottom: 38px;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin: 0 0 18px;
+        font-size: 15px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--brasa);
+      }
+
+      /* La rayita que sigue al titulo hasta el borde */
+      h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: rgba(224, 122, 60, 0.35);
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        margin-bottom: 18px;
+      }
+
+      /* ---------- Cada plato ---------- */
+
+      .linea {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin: 0;
+      }
+
+      .nombre {
+        font-size: 19px;
+      }
+
+      /* Los puntitos que llevan del nombre al precio, como en la carta de papel */
+      .union {
+        flex: 1;
+        min-width: 14px;
+        border-bottom: 1px dotted rgba(182, 164, 149, 0.5);
+        transform: translateY(-4px);
+      }
+
+      .precio {
+        flex: 0 0 auto;
+        font-size: 19px;
+        white-space: nowrap;
+      }
+
+      .detalle {
+        margin: 3px 0 0;
+        padding-right: 72px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-size: 15px;
+        color: var(--tenue);
+      }
+
+      .vacio {
+        padding: 40px 0;
+        text-align: center;
+        color: var(--tenue);
+      }
+  </style>
+</head>
+<body>
+  <header class="tapa">
+    <p class="arriba">Nuestra carta</p>
+    <h1>Restaurante</h1>
+    </header>
+    <p class="cubierto">Cubierto <b>$ 8.000</b> por persona</p>
     <main>
-      <h1>Menú digital</h1>
-      <p>Esta página está en preparación.<br />Acá va a estar la carta.</p>
+      <section>
+        <h2>Parrilla</h2>
+        <ul>
+          <li>
+            <p class="linea"><span class="nombre">Asado</span><span class="union"></span><span class="precio">$ 15.000</span></p>
+          </li>
+          <li>
+            <p class="linea"><span class="nombre">Matambre</span><span class="union"></span><span class="precio">$ 12.000</span></p>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
