@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Restaurante</title>
+    <title>Restaurante El Patio</title>
     <style>
       :root {
         color-scheme: dark;
@@ -127,7 +127,7 @@
         font-size: 19px;
       }
 
-      /* Los puntitos que llevan del nombre al precio, como en la carta de papel */
+      /* Los puntitos que llevan del nombre al precio, como en el menú de papel */
       .union {
         flex: 1;
         min-width: 14px;
@@ -139,6 +139,23 @@
         flex: 0 0 auto;
         font-size: 19px;
         white-space: nowrap;
+      }
+
+      /* Cuando se vende de varias formas, el nombre va solo y las formas debajo */
+      .soloNombre {
+        margin: 0 0 2px;
+        font-size: 19px;
+      }
+
+      .forma {
+        padding-left: 14px;
+        font-size: 16px;
+        color: var(--tenue);
+      }
+
+      .forma .precio {
+        color: var(--crema);
+        font-size: 17px;
       }
 
       .detalle {
@@ -158,34 +175,37 @@
 </head>
 <body>
   <header class="tapa">
-    <p class="arriba">Nuestra carta</p>
-    <h1>Restaurante</h1>
+    <p class="arriba">Nuestro menú</p>
+    <h1>Restaurante El Patio</h1>
     </header>
-    <p class="cubierto">Cubierto <b>$ 8.000</b> por persona</p>
+    <p class="cubierto">Cubierto <b>$ 8.500</b> por persona</p>
     <main>
       <section>
         <h2>Entradas</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Chorizo</span><span class="union"></span><span class="precio">$ 6.500</span></p>
+            <p class="linea"><span class="nombre">Chorizo</span><span class="union"></span><span class="precio">$ 7.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Empanada de carne</span><span class="union"></span><span class="precio">$ 3.500</span></p>
+            <p class="soloNombre">Empanada de carne</p>
+            <p class="linea forma"><span class="nombre">Unidad</span><span class="union"></span><span class="precio">$ 4.000</span></p>
+            <p class="linea forma"><span class="nombre">Media docena</span><span class="union"></span><span class="precio">$ 19.000</span></p>
+            <p class="linea forma"><span class="nombre">Docena</span><span class="union"></span><span class="precio">$ 36.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Empanada de jamón y queso</span><span class="union"></span><span class="precio">$ 3.500</span></p>
+            <p class="linea"><span class="nombre">Empanada de jamón y queso</span><span class="union"></span><span class="precio">$ 4.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Mollejas a la parrilla</span><span class="union"></span><span class="precio">$ 18.000</span></p>
+            <p class="linea"><span class="nombre">Mollejas a la parrilla</span><span class="union"></span><span class="precio">$ 19.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Morcilla</span><span class="union"></span><span class="precio">$ 6.000</span></p>
+            <p class="linea"><span class="nombre">Morcilla</span><span class="union"></span><span class="precio">$ 6.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Picada para dos</span><span class="union"></span><span class="precio">$ 32.000</span></p>
+            <p class="linea"><span class="nombre">Picada para dos</span><span class="union"></span><span class="precio">$ 33.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Provoleta a la parrilla</span><span class="union"></span><span class="precio">$ 12.000</span></p>
+            <p class="linea"><span class="nombre">Provoleta a la parrilla</span><span class="union"></span><span class="precio">$ 12.500</span></p>
           </li>
         </ul>
       </section>
@@ -193,19 +213,19 @@
         <h2>Pastas</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Canelones de verdura</span><span class="union"></span><span class="precio">$ 19.500</span></p>
+            <p class="linea"><span class="nombre">Canelones de verdura</span><span class="union"></span><span class="precio">$ 20.500,70</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Ravioles de ricota</span><span class="union"></span><span class="precio">$ 19.000</span></p>
+            <p class="linea"><span class="nombre">Ravioles de ricota</span><span class="union"></span><span class="precio">$ 20.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Sorrentinos de jamón y queso</span><span class="union"></span><span class="precio">$ 21.000</span></p>
+            <p class="linea"><span class="nombre">Sorrentinos de jamón y queso</span><span class="union"></span><span class="precio">$ 22.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Tallarines con tuco</span><span class="union"></span><span class="precio">$ 16.000</span></p>
+            <p class="linea"><span class="nombre">Tallarines con tuco</span><span class="union"></span><span class="precio">$ 16.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Ñoquis caseros</span><span class="union"></span><span class="precio">$ 17.000</span></p>
+            <p class="linea"><span class="nombre">Ñoquis caseros</span><span class="union"></span><span class="precio">$ 18.000</span></p>
           </li>
         </ul>
       </section>
@@ -213,31 +233,31 @@
         <h2>Parrilla</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Asado</span><span class="union"></span><span class="precio">$ 35.000</span></p>
+            <p class="linea"><span class="nombre">Asado</span><span class="union"></span><span class="precio">$ 36.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Bife de chorizo</span><span class="union"></span><span class="precio">$ 34.000</span></p>
+            <p class="linea"><span class="nombre">Bife de chorizo</span><span class="union"></span><span class="precio">$ 35.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Bondiola</span><span class="union"></span><span class="precio">$ 28.000</span></p>
+            <p class="linea"><span class="nombre">Bondiola</span><span class="union"></span><span class="precio">$ 29.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Costillar</span><span class="union"></span><span class="precio">$ 33.000</span></p>
+            <p class="linea"><span class="nombre">Costillar</span><span class="union"></span><span class="precio">$ 34.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Entraña</span><span class="union"></span><span class="precio">$ 38.000</span></p>
+            <p class="linea"><span class="nombre">Entraña</span><span class="union"></span><span class="precio">$ 39.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Matambre</span><span class="union"></span><span class="precio">$ 12.000</span></p>
+            <p class="linea"><span class="nombre">Matambre</span><span class="union"></span><span class="precio">$ 12.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Parrillada para dos</span><span class="union"></span><span class="precio">$ 68.000</span></p>
+            <p class="linea"><span class="nombre">Parrillada para dos</span><span class="union"></span><span class="precio">$ 70.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Pollo a la parrilla</span><span class="union"></span><span class="precio">$ 24.000</span></p>
+            <p class="linea"><span class="nombre">Pollo a la parrilla</span><span class="union"></span><span class="precio">$ 25.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Vacío</span><span class="union"></span><span class="precio">$ 32.000</span></p>
+            <p class="linea"><span class="nombre">Vacío</span><span class="union"></span><span class="precio">$ 33.000</span></p>
           </li>
         </ul>
       </section>
@@ -245,22 +265,22 @@
         <h2>Minutas</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Hamburguesa completa</span><span class="union"></span><span class="precio">$ 19.000</span></p>
+            <p class="linea"><span class="nombre">Hamburguesa completa</span><span class="union"></span><span class="precio">$ 20.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Lomito completo</span><span class="union"></span><span class="precio">$ 22.000</span></p>
+            <p class="linea"><span class="nombre">Lomito completo</span><span class="union"></span><span class="precio">$ 23.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Milanesa a caballo</span><span class="union"></span><span class="precio">$ 25.000</span></p>
+            <p class="linea"><span class="nombre">Milanesa a caballo</span><span class="union"></span><span class="precio">$ 26.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Milanesa napolitana con papas</span><span class="union"></span><span class="precio">$ 26.000</span></p>
+            <p class="linea"><span class="nombre">Milanesa napolitana con papas</span><span class="union"></span><span class="precio">$ 27.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Suprema napolitana</span><span class="union"></span><span class="precio">$ 24.000</span></p>
+            <p class="linea"><span class="nombre">Suprema napolitana</span><span class="union"></span><span class="precio">$ 25.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Tortilla de papas</span><span class="union"></span><span class="precio">$ 14.000</span></p>
+            <p class="linea"><span class="nombre">Tortilla de papas</span><span class="union"></span><span class="precio">$ 14.500</span></p>
           </li>
         </ul>
       </section>
@@ -268,16 +288,16 @@
         <h2>Ensaladas</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Ensalada César</span><span class="union"></span><span class="precio">$ 14.000</span></p>
+            <p class="linea"><span class="nombre">Ensalada César</span><span class="union"></span><span class="precio">$ 14.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Ensalada completa</span><span class="union"></span><span class="precio">$ 12.000</span></p>
+            <p class="linea"><span class="nombre">Ensalada completa</span><span class="union"></span><span class="precio">$ 12.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Ensalada mixta</span><span class="union"></span><span class="precio">$ 9.000</span></p>
+            <p class="linea"><span class="nombre">Ensalada mixta</span><span class="union"></span><span class="precio">$ 9.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Rúcula y parmesano</span><span class="union"></span><span class="precio">$ 11.000</span></p>
+            <p class="linea"><span class="nombre">Rúcula y parmesano</span><span class="union"></span><span class="precio">$ 11.500</span></p>
           </li>
         </ul>
       </section>
@@ -285,19 +305,19 @@
         <h2>Guarniciones</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Ensalada rusa</span><span class="union"></span><span class="precio">$ 8.500</span></p>
+            <p class="linea"><span class="nombre">Ensalada rusa</span><span class="union"></span><span class="precio">$ 9.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Papas a la provenzal</span><span class="union"></span><span class="precio">$ 9.000</span></p>
+            <p class="linea"><span class="nombre">Papas a la provenzal</span><span class="union"></span><span class="precio">$ 9.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Papas fritas</span><span class="union"></span><span class="precio">$ 8.000</span></p>
+            <p class="linea"><span class="nombre">Papas fritas</span><span class="union"></span><span class="precio">$ 8.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Puré de papas</span><span class="union"></span><span class="precio">$ 7.500</span></p>
+            <p class="linea"><span class="nombre">Puré de papas</span><span class="union"></span><span class="precio">$ 8.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Verduras grilladas</span><span class="union"></span><span class="precio">$ 9.500</span></p>
+            <p class="linea"><span class="nombre">Verduras grilladas</span><span class="union"></span><span class="precio">$ 10.000</span></p>
           </li>
         </ul>
       </section>
@@ -305,19 +325,19 @@
         <h2>Postres</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Budín de pan</span><span class="union"></span><span class="precio">$ 7.000</span></p>
+            <p class="linea"><span class="nombre">Budín de pan</span><span class="union"></span><span class="precio">$ 7.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Ensalada de frutas</span><span class="union"></span><span class="precio">$ 6.500</span></p>
+            <p class="linea"><span class="nombre">Ensalada de frutas</span><span class="union"></span><span class="precio">$ 7.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Flan casero con dulce de leche</span><span class="union"></span><span class="precio">$ 8.000</span></p>
+            <p class="linea"><span class="nombre">Flan casero con dulce de leche</span><span class="union"></span><span class="precio">$ 8.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Helado dos bochas</span><span class="union"></span><span class="precio">$ 7.000</span></p>
+            <p class="linea"><span class="nombre">Helado dos bochas</span><span class="union"></span><span class="precio">$ 7.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Queso y dulce</span><span class="union"></span><span class="precio">$ 7.500</span></p>
+            <p class="linea"><span class="nombre">Queso y dulce</span><span class="union"></span><span class="precio">$ 8.000</span></p>
           </li>
         </ul>
       </section>
@@ -325,22 +345,22 @@
         <h2>Bebidas</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Agua mineral</span><span class="union"></span><span class="precio">$ 4.000</span></p>
+            <p class="linea"><span class="nombre">Agua mineral</span><span class="union"></span><span class="precio">$ 4.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Agua saborizada</span><span class="union"></span><span class="precio">$ 4.500</span></p>
+            <p class="linea"><span class="nombre">Agua saborizada</span><span class="union"></span><span class="precio">$ 5.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Café</span><span class="union"></span><span class="precio">$ 4.500</span></p>
+            <p class="linea"><span class="nombre">Café</span><span class="union"></span><span class="precio">$ 5.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Exprimido de naranja</span><span class="union"></span><span class="precio">$ 6.000</span></p>
+            <p class="linea"><span class="nombre">Exprimido de naranja</span><span class="union"></span><span class="precio">$ 6.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Gaseosa</span><span class="union"></span><span class="precio">$ 5.000</span></p>
+            <p class="linea"><span class="nombre">Gaseosa</span><span class="union"></span><span class="precio">$ 5.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Limonada con jengibre</span><span class="union"></span><span class="precio">$ 6.500</span></p>
+            <p class="linea"><span class="nombre">Limonada con jengibre</span><span class="union"></span><span class="precio">$ 7.000</span></p>
           </li>
         </ul>
       </section>
@@ -348,22 +368,22 @@
         <h2>Vinos y cervezas</h2>
         <ul>
           <li>
-            <p class="linea"><span class="nombre">Cabernet botella</span><span class="union"></span><span class="precio">$ 28.000</span></p>
+            <p class="linea"><span class="nombre">Cabernet botella</span><span class="union"></span><span class="precio">$ 29.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Cerveza artesanal pinta</span><span class="union"></span><span class="precio">$ 8.000</span></p>
+            <p class="linea"><span class="nombre">Cerveza artesanal pinta</span><span class="union"></span><span class="precio">$ 8.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Copa de vino de la casa</span><span class="union"></span><span class="precio">$ 6.000</span></p>
+            <p class="linea"><span class="nombre">Copa de vino de la casa</span><span class="union"></span><span class="precio">$ 6.500</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Malbec botella</span><span class="union"></span><span class="precio">$ 26.000</span></p>
+            <p class="linea"><span class="nombre">Malbec botella</span><span class="union"></span><span class="precio">$ 27.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Porrón de cerveza</span><span class="union"></span><span class="precio">$ 6.500</span></p>
+            <p class="linea"><span class="nombre">Porrón de cerveza</span><span class="union"></span><span class="precio">$ 7.000</span></p>
           </li>
           <li>
-            <p class="linea"><span class="nombre">Vino de la casa tinto</span><span class="union"></span><span class="precio">$ 14.000</span></p>
+            <p class="linea"><span class="nombre">Vino de la casa tinto</span><span class="union"></span><span class="precio">$ 14.500</span></p>
           </li>
         </ul>
       </section>
